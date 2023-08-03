@@ -22,7 +22,7 @@ class Listener {
   
         console.log(result);
       } catch (error) {
-        console.error(error);
+        console.log("Listener",error);
       }
     };
   }

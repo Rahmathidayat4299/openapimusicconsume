@@ -11,6 +11,7 @@ const init = async () => {
   const listener = new Listener(playlistService, mailSender);
 
   const connection = await amqp.connect(process.env.RABBITMQ_SERVER);
+  console.log(process.env.RABBITMQ_SERVER);
   const channel = await connection.createChannel();
 
   await channel.assertQueue('export:playlist', {
